@@ -5,6 +5,8 @@ import LandingLayout from '@/components/layouts/LandingLayout';
 import type { NextPageWithLayout } from './_app';
 import '../styles/globals.css';
 import HomeNavbar from '@/components/HomeNavbar';
+import MonumentLogo from '../assets/monument-logo.svg';
+import Image from 'next/image';
 
 /** Homepage – wrapped in LandingLayout via getLayout */
 const Home: NextPageWithLayout = () => {
@@ -21,9 +23,15 @@ const Home: NextPageWithLayout = () => {
 
       {/* Centered hero content (the video background comes from LandingLayout) */}
       <main className='relative mx-auto flex h-screen max-w-4xl flex-col items-center justify-center text-center'>
-        <h1 className='text-5xl font-bold leading-tight text-black  md:text-6xl'>
-          a monument of the City&nbsp;to&nbsp;build
-        </h1>
+        <Image
+          src='/monument-logo.svg'
+          alt='monument logo'
+          width={800}
+          height={259}
+        />
+        {/* <h1 className='text-5xl font-bold leading-tight text-black  md:text-6xl'>
+          a monument of the city&nbsp;to&nbsp;build
+        </h1> */}
 
         {/* <Link
           href='/contributions'

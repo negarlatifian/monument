@@ -18,8 +18,8 @@ export default function Navbar() {
 
   const linkClass = (href: string) =>
     `block px-4 py-2 text-sm transition-colors
-     ${pathname === href ? 'text-black font-semibold' : 'text-gray-700'}
-     hover:text-black`;
+     ${pathname === href ? 'text-[#fece07] font-semibold' : 'text-black'}
+     hover:text-[rgb(254,206,7)]`;
 
   return (
     <nav className='relative z-30 '>

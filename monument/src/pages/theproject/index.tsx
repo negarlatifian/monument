@@ -13,12 +13,12 @@ const TheProjectPage: NextPage = () => (
       />
     </Head>
 
-    <div>
-      <section className='flex flex-row'>
-        <div className='flex flex-col gap-3'>
-          <span className='ml-2'>
-            <h1 className=' text-[3rem]'>About </h1>
-            <h1 className=' text-[3rem]'>the project</h1>
+    <div className='ml-5 mt-15'>
+      <section className='flex flex-row gap-23'>
+        <div className='flex flex-col gap-3 justify-between'>
+          <span className='ml-2 mt-[-0.5rem]'>
+            <h1 className=' text-[2.4rem]'>About </h1>
+            <h1 className=' text-[2.4rem]'>the project</h1>
           </span>
           <Link
             href='/theprojectsv'
@@ -27,14 +27,14 @@ const TheProjectPage: NextPage = () => (
             svenska
           </Link>
         </div>
-        <article>
+        <article className='w-[68%] text-[1.3rem] font-light'>
           <p>
-            A Monument of the City to Build is a socially engaged artistic
-            project, exploring the politics of residentship in the Swedish urban
-            landscape through the notion of the right to the city. In a series
-            of pedagogical events across Botkyrka and Gothenburg, over 200
-            participants have contributed to the project thus far with their
-            thoughts, reflections and proposals.
+            <i>A Monument of the City to Build</i> is a socially engaged
+            artistic project, exploring the politics of residentship in the
+            Swedish urban landscape through the notion of the right to the city.
+            In a series of pedagogical events across Botkyrka and Gothenburg,
+            over 200 participants have contributed to the project thus far with
+            their thoughts, reflections and proposals.
           </p>
         </article>
       </section>

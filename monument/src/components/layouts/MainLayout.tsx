@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { PropsWithChildren } from 'react';
+import Navbar from '../Navbar';
 
 /** A shared layout for every page *except* the landing page */
 export default function MainLayout({ children }: PropsWithChildren) {
@@ -15,20 +16,21 @@ export default function MainLayout({ children }: PropsWithChildren) {
   return (
     <>
       {/* ---------- Header ---------- */}
-      <header className='sticky top-0 z-30 border-b bg-white/90 backdrop-blur'>
+      <header className='sticky top-0 z-30  bg-white/90 backdrop-blur'>
         <div className='mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6'>
           <Link href='/' className='text-xl font-semibold text-black'>
-            Monument
+            A Monument of a City to Build
           </Link>
 
-          <nav className='hidden items-center gap-6 text-sm font-medium sm:flex'>
+          {/* <nav className='hidden items-center gap-6 text-sm font-medium sm:flex'>
             <Link href='/about' className={linkClass('/about')}>
               About
             </Link>
             <Link href='/contributions' className={linkClass('/contributions')}>
               Contributions
             </Link>
-          </nav>
+          </nav> */}
+          <Navbar />
         </div>
       </header>
 

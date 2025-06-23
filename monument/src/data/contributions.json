@@ -3,27 +3,42 @@
     "id": 1,
     "year": 2023,
     "coordinate": "57°39'08.3\"N 11°54'24.9\"E",
-    "title_en": "We need more secure stairs in the area.",
-    "text_en": "We drew a hill, because we didn't have a picture of one. We need more secure stairs in the area. Elderly people can slip in the winter, when it's frozen.",
-    "text_sv": "Vi målade en backe, eftersom vi inte hade en bild på en. Vi behöver fler säkra trappor i området. Gamla personer kan halka på vintern när det är fruset.",
-    "image": "1.webp"
+    "text_en": [
+      "(We drew a hill, because we didn't have a picture of one.)",
+      "We need more secure stairs in the area.",
+      "Elderly people can slip in the winter, when it's frozen."
+    ],
+    "text_sv": [
+      "(Vi målade en backe, eftersom vi inte hade en bild på en.)",
+      "Vi behöver fler säkra trappor i området.",
+      "Gamla personer kan halka på vintern när det är fruset."
+    ],
+    "image": "/contributions/gtb/1.jpg"
   },
   {
     "id": 2,
     "year": 2023,
-    "coordinate": "57°39'08.3\"N 11°54'24.9\"E",
-    "title_en": "We have asked for a football field in our area many times.",
-    "text_en": "We have asked for a football field in our area many times. They ignored us and said no to us. Now we demonstrate together through an art work. This work was made by three children together.",
-    "text_sv": "Vi har flera gånger bett om en fotbollsplan i vårt område. De ignorerade och sa nej till oss. Nu demonstrerar vi tillsammans genom ett konstverk. Arbetet har gjorts av tre barn tillsammans.",
-    "image": "2.webp"
+    "coordinate": "57°39'20.9\"N 11°54'44.7\"E",
+    "text_en": [
+      "We have asked for a football field in our area many times. They ignored us and said no to us. Now we demonstrate together through an art work.",
+      "(This work was made by three children together.)"
+    ],
+    "text_sv": [
+      "Vi har flera gånger bett om en fotbollsplan i vårt område. De ignorerade och sa nej till oss.Nu demonstrerar vi tillsammans genom ett konstverk.",
+      "(Arbetet har gjorts av tre barn tillsammans.)"
+    ],
+    "image": "/contributions/gtb/2.jpg"
   },
   {
     "id": 3,
     "year": 2023,
-    "coordinate": "57°39'08.3\"N 11°54'24.9\"E",
-    "title_en": "This place looks dead, so I have created a better playground for children and an ice cream shop.",
-    "text_en": "This place looks dead, so I have created a better playground for children and an ice cream shop. This way, I've brought more people here.",
-    "text_sv": "Det här stället ser dött ut, därför har jag gjort en bättre lekplats för barnen och en glass-affär. På det här sättet har jag fått hit fler människor.",
-    "image": "3.webp"
+    "coordinate": "57°39'20.4\"N 11°54'44.8\"E",
+    "text_en": [
+      "This place looks dead, so I have created a better playground for children and an ice cream shop. This way, I've brought more people here."
+    ],
+    "text_sv": [
+      "Det här stället ser dött ut, därför har jag gjort en bättre lekplats för barnen och en glass-affär. På det här sättet har jag fått hit fler människor."
+    ],
+    "image": "/contributions/gtb/3.jpg"
   }
 ]

@@ -1,17 +1,34 @@
 // src/pages/theproject.tsx
+import { promises as fs } from 'fs';
 import Head from 'next/head';
-import type { NextPage } from 'next';
-import Link from 'next/link';
-import SectionBlock from '@/components/SectionBlock';
+import type { NextPage, GetStaticProps } from 'next';
 import DoubleButton from '@/components/DoubleButton';
+import ContributionItem from '@/components/ContributionItem';
+import { Contribution } from '@/types';
 
-const TheProjectPage: NextPage = () => (
+interface ContributionsPageProps {
+  contributions: Contribution[];
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const file = await fs.readFile(
+    process.cwd() + '/src/data/contributions.json',
+    'utf8'
+  );
+  const contributions: Contribution[] = JSON.parse(file);
+
+  return { props: { contributions } };
+};
+
+const ContributionsPage: NextPage<ContributionsPageProps> = ({
+  contributions,
+}) => (
   <>
     <Head>
-      <title>The Project Svenska | Monument of the City to Build</title>
+      <title>Contributions | Monument of the City to Build</title>
       <meta
-        name='map'
-        content='Learn about the aims, pedagogy and political ideas behind A Monument of the City to Build.'
+        name='description'
+        content='Browse every contribution to A Monument of the City to Build.'
       />
     </Head>
     <div className='flex flex-col ml-5 mt-15 mr-15 mb-20'>
@@ -86,7 +103,11 @@ const TheProjectPage: NextPage = () => (
         </div>
       </section>
     </div>
+    <div className='flex flex-col'>
+      {contributions.map((contribution) => (
+        <ContributionItem key={contribution.id} contribution={contribution} />
+      ))}
+    </div>
   </>
 );
-
-export default TheProjectPage;
+export default ContributionsPage;

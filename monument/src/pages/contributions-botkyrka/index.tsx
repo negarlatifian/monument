@@ -8,10 +8,10 @@ import DoubleButton from '@/components/DoubleButton';
 const TheProjectPage: NextPage = () => (
   <>
     <Head>
-      <title>The Project Svenska | Monument of the City to Build</title>
+      <title>Contributions | Monument of the City to Build</title>
       <meta
-        name='map'
-        content='Learn about the aims, pedagogy and political ideas behind A Monument of the City to Build.'
+        name='description'
+        content='Browse every contribution to A Monument of the City to Build.'
       />
     </Head>
     <div className='flex flex-col ml-5 mt-15 mr-15 mb-20'>

@@ -11,7 +11,7 @@ const ContributionItem: React.FC<Props> = ({ contribution }) => (
       <p>{contribution.id}</p>
     </div>
     <div className='flex flex-row ml-6 mt-5 '>
-      <div className='flex flex-col text-[rgb(94,94,94)] text-[0.7rem] gap-1'>
+      <div className='flex flex-col text-[rgb(94,94,94)] text-[0.7rem] gap-1 w-[15%]'>
         <div>
           <p className='underline'>{contribution.coordinate}</p>
         </div>

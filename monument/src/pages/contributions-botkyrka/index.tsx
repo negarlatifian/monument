@@ -1,11 +1,28 @@
 // src/pages/theproject.tsx
+import { promises as fs } from 'fs';
 import Head from 'next/head';
-import type { NextPage } from 'next';
-import Link from 'next/link';
-import SectionBlock from '@/components/SectionBlock';
+import type { NextPage, GetStaticProps } from 'next';
 import DoubleButton from '@/components/DoubleButton';
+import ContributionItem from '@/components/ContributionItem';
+import { Contribution } from '@/types';
 
-const TheProjectPage: NextPage = () => (
+interface ContributionsPageProps {
+  contributions: Contribution[];
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const file = await fs.readFile(
+    process.cwd() + '/src/data/contributions-btk.json',
+    'utf8'
+  );
+  const contributions: Contribution[] = JSON.parse(file);
+
+  return { props: { contributions } };
+};
+
+const ContributionsBtkPage: NextPage<ContributionsPageProps> = ({
+  contributions,
+}) => (
   <>
     <Head>
       <title>Contributions | Monument of the City to Build</title>
@@ -14,7 +31,7 @@ const TheProjectPage: NextPage = () => (
         content='Browse every contribution to A Monument of the City to Build.'
       />
     </Head>
-    <div className='flex flex-col ml-5 mt-15 mr-15 mb-20'>
+    <div className='flex flex-col ml-6 mt-15 mr-15 mb-20'>
       <section className='flex flex-row text-[0.86rem] font-light leading-4 gap-20 mb-15 '>
         <div className='w-[87%] flex flex-col gap-5'>
           <p>
@@ -65,19 +82,32 @@ const TheProjectPage: NextPage = () => (
       <section className='flex flex-row text-[0.86rem] font-light leading-4 gap-20 mb-15 '>
         <div className='w-[87%] flex flex-col gap-5'>
           <p>
-            The contributions have been gathered in collaboration with:
-            MKC-Mångkulturellt Centrum, Fritidsmässan på S:t Botvids Gymnasium
+            The contributions have been gathered in collaboration with: Blå
+            Stället Konsthall, Hammarkullens skolan, Dômen konstskola, Göteborgs
+            Botaniska Trädgård, Allas Ateljé, Konstepidemin, University of
+            Gothenburg/HDK-Valand (lärarutbildning department),
+            Skolförvaltningen, Skolan Mitt i byn Nordost, Sandeklevsskolan,
+            Bergsjöskolan, Rannebergsskolan, Frölunda på Linden/positivparken,
+            and Svartedalsskolan.
           </p>
         </div>
         <div className='w-[87%] flex flex-col gap-5'>
           <p>
-            Bidragen har samlats in i samarbete med: MKC-Mångkulturellt Centrum,
-            Fritidsmässan på S:t Botvids Gymnasium
+            Bidragen har samlats in i samarbete med: Blå Stället Konsthall,
+            Hammarkullens skola, Dômen konstskola, Göteborgs Botaniska Trädgård,
+            Allas Ateljé, Konstepidemin, University of Gothenburg/HDK-Valand
+            (lärarutbildning department), Skolförvaltningen, Skolan Mitt i byn
+            Nordost, Sandeklevsskolan, Bergsjöskolan, Rannebergsskolan, Frölunda
+            på Linden/positivparken och Svartedalsskolan.
           </p>
         </div>
       </section>
     </div>
+    <div className='flex flex-col'>
+      {contributions.map((contribution) => (
+        <ContributionItem key={contribution.id} contribution={contribution} />
+      ))}
+    </div>
   </>
 );
-
-export default TheProjectPage;
+export default ContributionsBtkPage;

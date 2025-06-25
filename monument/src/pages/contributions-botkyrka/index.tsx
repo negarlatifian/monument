@@ -5,6 +5,7 @@ import type { NextPage, GetStaticProps } from 'next';
 import DoubleButton from '@/components/DoubleButton';
 import ContributionItem from '@/components/ContributionItem';
 import { Contribution } from '@/types';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 interface ContributionsPageProps {
   contributions: Contribution[];
@@ -31,7 +32,7 @@ const ContributionsBtkPage: NextPage<ContributionsPageProps> = ({
         content='Browse every contribution to A Monument of the City to Build.'
       />
     </Head>
-    <div className='flex flex-col ml-6 mt-15 mr-15 mb-20'>
+    <div className='flex flex-col ml-6 mt-15 mr-15 mb-5'>
       <section className='flex flex-row text-[0.86rem] font-light leading-4 gap-20 mb-15 '>
         <div className='w-[87%] flex flex-col gap-5'>
           <p>
@@ -82,23 +83,14 @@ const ContributionsBtkPage: NextPage<ContributionsPageProps> = ({
       <section className='flex flex-row text-[0.86rem] font-light leading-4 gap-20 mb-15 '>
         <div className='w-[87%] flex flex-col gap-5'>
           <p>
-            The contributions have been gathered in collaboration with: Blå
-            Stället Konsthall, Hammarkullens skolan, Dômen konstskola, Göteborgs
-            Botaniska Trädgård, Allas Ateljé, Konstepidemin, University of
-            Gothenburg/HDK-Valand (lärarutbildning department),
-            Skolförvaltningen, Skolan Mitt i byn Nordost, Sandeklevsskolan,
-            Bergsjöskolan, Rannebergsskolan, Frölunda på Linden/positivparken,
-            and Svartedalsskolan.
+            The contributions have been gathered in collaboration with:
+            MKC-Mångkulturellt Centrum, Fritidsmässan på S:t Botvids Gymnasium
           </p>
         </div>
         <div className='w-[87%] flex flex-col gap-5'>
           <p>
-            Bidragen har samlats in i samarbete med: Blå Stället Konsthall,
-            Hammarkullens skola, Dômen konstskola, Göteborgs Botaniska Trädgård,
-            Allas Ateljé, Konstepidemin, University of Gothenburg/HDK-Valand
-            (lärarutbildning department), Skolförvaltningen, Skolan Mitt i byn
-            Nordost, Sandeklevsskolan, Bergsjöskolan, Rannebergsskolan, Frölunda
-            på Linden/positivparken och Svartedalsskolan.
+            Bidragen har samlats in i samarbete med: MKC-Mångkulturellt Centrum,
+            Fritidsmässan på S:t Botvids Gymnasium
           </p>
         </div>
       </section>
@@ -108,6 +100,7 @@ const ContributionsBtkPage: NextPage<ContributionsPageProps> = ({
         <ContributionItem key={contribution.id} contribution={contribution} />
       ))}
     </div>
+    <ScrollToTopButton />
   </>
 );
 export default ContributionsBtkPage;

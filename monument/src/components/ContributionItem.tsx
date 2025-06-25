@@ -1,8 +1,6 @@
 'use-client';
-import { useState } from 'react';
-import Image from 'next/image';
+
 import { Contribution } from '@/types';
-import ImageLightbox from '@/components/ImageLightbox';
 
 interface Props {
   contribution: Contribution;
@@ -15,7 +13,6 @@ const ContributionItem: React.FC<Props> = ({
   idx,
   onOpen,
 }: Props) => {
-  const [open, setOpen] = useState(false);
   return (
     <section className='mt-10 flex flex-col'>
       <span className='border-t-[0.03rem] ml-[-1.5rem] mb-4'></span>
@@ -50,13 +47,6 @@ const ContributionItem: React.FC<Props> = ({
           />
         </div>
       </div>
-      {/* {open && (
-        <ImageLightbox
-          src={contribution.image}
-          alt={contribution.text_en?.[0] ?? ''}
-          onClose={() => setOpen(false)}
-        />
-      )} */}
     </section>
   );
 };

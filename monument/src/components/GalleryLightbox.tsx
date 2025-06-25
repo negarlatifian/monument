@@ -48,7 +48,7 @@ export default function GalleryLightbox({
       {/* × close */}
       <button
         onClick={onClose}
-        className='absolute top-5 right-6 text-3xl text-white hover:scale-110'
+        className='absolute top-5 right-10 scale-150 text-3xl text-white hover:scale-150 hover:cursor-pointer hover:text-[#FECE07]'
         aria-label='Close'
       >
         &times;
@@ -62,7 +62,7 @@ export default function GalleryLightbox({
               e.stopPropagation();
               prev();
             }}
-            className='absolute left-4 text-4xl text-white hover:scale-110'
+            className='absolute left-10 text-4xl text-white hover:scale-110 hover:cursor-pointer hover:text-[#FECE07]'
             aria-label='Previous'
           >
             &#10094;
@@ -72,7 +72,7 @@ export default function GalleryLightbox({
               e.stopPropagation();
               next();
             }}
-            className='absolute right-4 text-4xl text-white hover:scale-110'
+            className='absolute right-10 text-4xl text-white hover:scale-110 hover:cursor-pointer hover:text-[#FECE07]'
             aria-label='Next'
           >
             &#10095;

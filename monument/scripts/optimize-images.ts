@@ -3,8 +3,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
 
-const SRC_DIR = 'public/contributions';
-const OUT_DIR = 'public/contributions-optimized';
+const SRC_DIR = 'public/contributions/btk';
+const OUT_DIR = 'public/contributions-optimized/btk';
 
 async function main() {
   // 1. Make sure the output folder exists

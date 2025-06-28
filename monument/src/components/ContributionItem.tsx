@@ -1,6 +1,7 @@
 'use-client';
 
 import { Contribution } from '@/types';
+import Image from 'next/image';
 
 interface Props {
   contribution: Contribution;
@@ -39,9 +40,16 @@ const ContributionItem: React.FC<Props> = ({
           ))}
         </div>
         <div className='w-[28%] flex mt-[-1.3rem] ml-10'>
-          <img
-            src={contribution.image}
+          <Image
+            src={`/contributions-optimized/${contribution.image}.webp`}
             alt={`Contribution ${contribution.id}`}
+            width={800} // logical display size – adjust as needed
+            height={600}
+            sizes='(max-width:768px) 90vw, 800px' // responsive hints
+            placeholder='blur'
+            blurDataURL={`/contributions-optimized/thumbs/${contribution.image}.webp`}
+            // src={contribution.image}
+            // alt={`Contribution ${contribution.id}`}
             className='cursor-pointer rounded'
             onClick={() => onOpen(idx)}
           />

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "optimize-img": "tsx scripts/optimize-images.ts",
+    "build": "npm run optimize-img && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -15,10 +16,13 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^20.19.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "sharp": "^0.34.2",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
   }
 }

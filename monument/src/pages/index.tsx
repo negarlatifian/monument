@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { ReactElement } from 'react';
 import LandingLayout from '@/components/layouts/LandingLayout';
 import type { NextPageWithLayout } from './_app';
-import '../styles/globals.css';
+// import '../styles/globals.css';
 import HomeNavbar from '@/components/HomeNavbar';
 import MonumentLogo from '../assets/monument-logo.svg';
 import Image from 'next/image';

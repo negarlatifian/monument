@@ -12,7 +12,6 @@ import Image from 'next/image';
 const Home: NextPageWithLayout = () => {
   return (
     <>
-      {/* Document head */}
       <Head>
         <title>Monument of the City to Build</title>
         <meta

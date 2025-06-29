@@ -4,6 +4,7 @@ import LandingLayout from '@/components/layouts/LandingLayout';
 import type { NextPageWithLayout } from './_app';
 import HomeNavbar from '@/components/HomeNavbar';
 import Image from 'next/image';
+import Link from 'next/link';
 
 /** Homepage – wrapped in LandingLayout via getLayout */
 const Home: NextPageWithLayout = () => {
@@ -24,13 +25,16 @@ const Home: NextPageWithLayout = () => {
           <HomeNavbar />
         </div>
         <div className='flex flex-col items-center justify-center text-center'>
-          <Image
-            src='/monument-logo.svg'
-            alt='monument logo'
-            width={800}
-            height={259}
-            priority
-          />
+          <Link className='flex justify-center' href='/theproject'>
+            <Image
+              className='sm:w-[100%] w-[80%]'
+              src='/monument-logo.svg'
+              alt='monument logo'
+              width={800}
+              height={259}
+              priority
+            />
+          </Link>
           <div className='hidden sm:flex'>
             <HomeNavbar />
           </div>

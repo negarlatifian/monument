@@ -25,9 +25,11 @@ const Home: NextPageWithLayout = () => {
           <HomeNavbar />
         </div>
         <div className='flex flex-col items-center justify-center text-center'>
-          <Link className='flex justify-center' href='/theproject'>
+          <Link
+            className='flex justify-center w-[80%] sm:w-[100%]'
+            href='/theproject'
+          >
             <Image
-              className='sm:w-[100%] w-[80%]'
               src='/monument-logo.svg'
               alt='monument logo'
               width={800}

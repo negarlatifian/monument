@@ -1,11 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import type { ReactElement } from 'react';
 import LandingLayout from '@/components/layouts/LandingLayout';
 import type { NextPageWithLayout } from './_app';
-// import '../styles/globals.css';
 import HomeNavbar from '@/components/HomeNavbar';
-import MonumentLogo from '../assets/monument-logo.svg';
 import Image from 'next/image';
 
 /** Homepage – wrapped in LandingLayout via getLayout */
@@ -28,16 +25,6 @@ const Home: NextPageWithLayout = () => {
           width={800}
           height={259}
         />
-        {/* <h1 className='text-5xl font-bold leading-tight text-black  md:text-6xl'>
-          a monument of the city&nbsp;to&nbsp;build
-        </h1> */}
-
-        {/* <Link
-          href='/contributions'
-          className='mt-10 rounded-xl bg-white/90 px-6 py-3 text-lg font-medium text-gray-900 backdrop-blur hover:bg-white'
-        >
-          View contributions
-        </Link> */}
         <HomeNavbar />
       </main>
     </>

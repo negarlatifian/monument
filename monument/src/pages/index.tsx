@@ -15,6 +15,7 @@ const Home: NextPageWithLayout = () => {
           name='description'
           content='Discover hundreds of ideas imagined by Gothenburg’s children.'
         />
+        <link rel='icon' href='/favicon.ico' sizes='any' />
       </Head>
 
       {/* Centered hero content (the video background comes from LandingLayout) */}

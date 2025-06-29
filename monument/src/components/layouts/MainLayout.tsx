@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { PropsWithChildren } from 'react';
 import Navbar from '../Navbar';
+import Head from 'next/head';
 
 /** A shared layout for every page *except* the landing page */
 export default function MainLayout({ children }: PropsWithChildren) {
@@ -15,6 +16,11 @@ export default function MainLayout({ children }: PropsWithChildren) {
 
   return (
     <>
+      <Head>
+        <link rel='icon' href='/favicon.ico' sizes='any' />
+        {/* optional additional formats */}
+        {/* <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> */}
+      </Head>
       {/* ---------- Header ---------- */}
       <header className='sticky top-0 z-30  bg-white/90 backdrop-blur'>
         <div className='mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6'>

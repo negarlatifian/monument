@@ -12,6 +12,7 @@ const TheProjectPage: NextPage = () => (
         name='description'
         content='Learn about the aims, pedagogy and political ideas behind A Monument of the City to Build.'
       />
+      <link rel='icon' href='/favicon.ico' sizes='any' />
     </Head>
 
     <div className='ml-5 mt-15'>

@@ -19,14 +19,22 @@ const Home: NextPageWithLayout = () => {
       </Head>
 
       {/* Centered hero content (the video background comes from LandingLayout) */}
-      <main className='relative mx-auto flex h-screen max-w-4xl flex-col items-center justify-center text-center'>
-        <Image
-          src='/monument-logo.svg'
-          alt='monument logo'
-          width={800}
-          height={259}
-        />
-        <HomeNavbar />
+      <main className='relative mx-auto  h-screen max-w-4xl flex flex-col justify-center '>
+        <div className='sm:hidden absolute top-4 right-4'>
+          <HomeNavbar />
+        </div>
+        <div className='flex flex-col items-center justify-center text-center'>
+          <Image
+            src='/monument-logo.svg'
+            alt='monument logo'
+            width={800}
+            height={259}
+            priority
+          />
+          <div className='hidden sm:flex'>
+            <HomeNavbar />
+          </div>
+        </div>
       </main>
     </>
   );

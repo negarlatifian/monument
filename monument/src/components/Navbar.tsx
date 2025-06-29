@@ -39,7 +39,7 @@ export default function Navbar() {
                       px-2 py-2 sm:px-6'
       >
         {/* desktop links */}
-        <div className='hidden gap-2 sm:flex'>
+        <div className='hidden gap-2 sm:flex sm:gap-8'>
           {navItems.map(({ label, href }) => (
             <Link key={href} href={href} className={linkClass(href)}>
               {label}

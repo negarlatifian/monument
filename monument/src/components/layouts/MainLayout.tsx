@@ -23,7 +23,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
       </Head>
       {/* ---------- Header ---------- */}
       <header className='sticky top-0 z-30  bg-white/90 backdrop-blur'>
-        <div className='mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6'>
+        <div className='mx-auto flex max-w-5xl items-center justify-between px-4 py-3 '>
           <Link
             href='/'
             className='sm:text-xl text-[1rem] font-semibold text-black'

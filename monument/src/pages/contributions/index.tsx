@@ -37,7 +37,7 @@ const ContributionsPage: NextPage<ContributionsPageProps> = ({
           content='Browse every contribution to A Monument of the City to Build.'
         />
       </Head>
-      <div className='flex flex-col ml-6 mt-15 mr-15 mb-5'>
+      <div className='flex flex-col sm:ml-6 mt-15 sm:mr-15 mb-5'>
         <section className='flex flex-row text-[0.86rem] font-light leading-4 gap-20 mb-15 '>
           <div className='w-[87%] flex flex-col gap-5'>
             <p>

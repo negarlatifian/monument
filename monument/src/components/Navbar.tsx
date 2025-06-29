@@ -1,5 +1,5 @@
-// src/components/Navbar.tsx
-import { useState } from 'react';
+//
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -16,20 +16,30 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname } = useRouter();
 
+  /* lock body-scroll while menu is open */
+  useEffect(() => {
+    document.body.classList.toggle('overflow-hidden', open);
+    return () => document.body.classList.remove('overflow-hidden');
+  }, [open]);
+
   const linkClass = (href: string) =>
-    `block px-4 py-2 text-[0.75rem] transition-colors
+    `block py-4 text-[0.75rem] transition-colors
      ${
        pathname === href
-         ? 'text-[rgb(186,186,186)] font-semibold'
+         ? 'font-semibold text-[rgb(186,186,186)]'
          : 'text-[rgb(54,54,54)]'
      }
      hover:text-[rgb(254,206,7)]`;
 
   return (
-    <nav className='relative z-30 '>
-      <div className='mx-auto flex max-w-5xl items-center justify-between px-2 py-2 sm:px-6'>
-        {/* Desktop links */}
-        <div className='hidden items-center gap-1 sm:flex'>
+    <nav className='relative z-30'>
+      {/* ───── Top bar ───── */}
+      <div
+        className='mx-auto flex max-w-5xl items-center justify-between
+                      px-2 py-2 sm:px-6'
+      >
+        {/* desktop links */}
+        <div className='hidden gap-2 sm:flex'>
           {navItems.map(({ label, href }) => (
             <Link key={href} href={href} className={linkClass(href)}>
               {label}
@@ -37,10 +47,10 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile toggle */}
+        {/* hamburger (mobile only) */}
         <button
-          onClick={() => setOpen(!open)}
           aria-label='Toggle navigation'
+          onClick={() => setOpen(!open)}
           className='sm:hidden'
         >
           <svg
@@ -50,35 +60,58 @@ export default function Navbar() {
             viewBox='0 0 24 24'
           >
             {open ? (
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M6 18L18 6M6 6l12 12'
-              />
+              <></>
             ) : (
               <path
                 strokeLinecap='round'
                 strokeLinejoin='round'
-                d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+                d='M3 6h18M3 12h18M3 18h18'
               />
             )}
           </svg>
         </button>
       </div>
 
-      {/* Mobile panel */}
+      {/* ───── Mobile full-screen overlay ───── */}
       {open && (
-        <div className='sm:hidden'>
-          {navItems.map(({ label, href }) => (
-            <Link
-              key={href}
-              href={href}
-              className={linkClass(href)}
-              onClick={() => setOpen(false)}
+        <div
+          /* absolute root-level sheet */
+          className='fixed inset-0 z-[60] w-screen h-screen bg-white sm:hidden'
+        >
+          {/*   close (X)   */}
+          <button
+            aria-label='Close navigation'
+            onClick={() => setOpen(false)}
+            className='absolute top-4 right-4 rounded-md p-2
+                 transition-colors hover:bg-gray-100 active:scale-95'
+          >
+            <svg
+              className='h-7 w-7 stroke-gray-800'
+              fill='none'
+              strokeWidth={1.5}
+              viewBox='0 0 24 24'
             >
-              {label}
-            </Link>
-          ))}
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M6 18L18 6M6 6l12 12'
+              />
+            </svg>
+          </button>
+
+          {/*   centred nav links   */}
+          <nav className='flex min-h-full flex-col items-center justify-center gap-8'>
+            {navItems.map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setOpen(false)}
+                className={linkClass(href)}
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
         </div>
       )}
     </nav>

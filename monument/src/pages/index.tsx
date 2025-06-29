@@ -21,7 +21,7 @@ const Home: NextPageWithLayout = () => {
 
       {/* Centered hero content (the video background comes from LandingLayout) */}
       <main className='relative mx-auto  h-screen max-w-4xl flex flex-col justify-center '>
-        <div className='sm:hidden absolute top-4 right-4'>
+        <div className='sm:hidden absolute top-4 right-4 '>
           <HomeNavbar />
         </div>
         <div className='flex flex-col items-center justify-center text-center'>
@@ -37,7 +37,7 @@ const Home: NextPageWithLayout = () => {
               priority
             />
           </Link>
-          <div className='hidden sm:flex'>
+          <div className='hidden sm:flex sm:w-[100%] sm:justify-end sm:px-8'>
             <HomeNavbar />
           </div>
         </div>

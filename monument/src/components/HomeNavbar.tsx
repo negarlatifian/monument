@@ -23,15 +23,15 @@ export default function Navbar() {
   }, [open]);
 
   const linkClass = (href: string) =>
-    `block py-4 text-lg tracking-wide transition-colors
+    `block py-4 text-[0.9rem] tracking-wide transition-colors
      ${pathname === href ? 'font-semibold text-[#FECE07]' : 'text-gray-900'}
      hover:text-[#FECE07]`;
 
   return (
     <nav className='relative z-30'>
       {/* ---------- Desktop bar ---------- */}
-      <div className='mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6'>
-        <div className='hidden gap-6 sm:flex'>
+      <div className='mx-auto flex max-w-5xl items-center justify-between px-4 py-3'>
+        <div className='hidden gap-6 sm:flex sm:justify-end sm:gap-10 '>
           {navItems.map(({ label, href }) => (
             <Link key={href} href={href} className={linkClass(href)}>
               {label}
@@ -72,7 +72,7 @@ export default function Navbar() {
       {open && (
         <div
           className='fixed inset-0 z-40 flex flex-col items-center justify-center
-                     gap-1 bg-white px-6 text-center sm:hidden'
+                     gap-1 bg-white  px-6 text-center sm:hidden'
         >
           {/* Close (X) button */}
           <button

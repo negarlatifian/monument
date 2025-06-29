@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Exhibition at MKC",
+    "subtitle": "April 2024 - MKC Mångkulturellt Centrum",
+    "imageUrl": [
+      "/publicDisplay/mkc/01.jpg",
+      "/publicDisplay/mkc/02.jpg",
+      "/publicDisplay/mkc/03.jpg",
+      "/publicDisplay/mkc/04.jpg"
+    ]
+  },
+  {
+    "title": "Exhibition at Bergsjön Centrum",
+    "subtitle": "September-November 2023 - Bergsjön Centrum Part of GIBCA Extended Program",
+    "imageUrl": [
+      "/publicDisplay/bergsjon/01.jpg",
+      "/publicDisplay/bergsjon/02.jpg",
+      "/publicDisplay/bergsjon/03.jpg",
+      "/publicDisplay/bergsjon/04.jpg"
+    ]
+  },
+  {
+    "title": "Exhibition at Floras Rike",
+    "subtitle": "July/August 2021 - Gothenburg Botanical Garden",
+    "desc_en": [
+      "At the exhibition in Floras Rike, we gathered all the contributions from the pedagogical events we had previously organised in Hammarkullsskolan, Dômen Konstskola, Kulturstråket and Konstepidemin.",
+      "In presenting all the contributions together, we intended to create a monument as a symbolic action – to join the city centre with the suburbs.",
+      "We wanted to present how our collective imaginary of the city to build contains vastly different perceptions of urban public space. These are based on our own experiences of our neighbourhoods, but also on often-exaggerated portrayals by the media.",
+      "As part of the exhibition, we had a DIY area in the venue for the visitors to create their own photo interventions with which to contribute to the project. In addition, we organised three pedagogical events in which we facilitated a discussion on the concept of the right to the city."
+    ],
+    "desc_sv": [
+      "På utställningen i Floras Rike samlade vi alla bidrag från de pedagogiska evenemang som vi tidigare hade organiserat i Hammarkullsskolan, Dômen Konstskola, Kulturstråket och Konstepidemin.",
+      "Genom att presentera alla bidrag tillsammans ville vi skapa ett monument som en symbolisk handling - att förena stadskärnan med förorterna.",
+      "Vi ville visa hur vår kollektiva föreställning om den stad som ska byggas innehåller vitt skilda uppfattningar om stadens offentliga rum. Dessa baseras på våra egna erfarenheter av våra grannskap, men också på ofta överdrivna porträtt i media.",
+      "Som en del av utställningen hade vi ett DIY-område i lokalen där besökarna kunde skapa sina egna fotointerventioner och på så sätt bidra till projektet. Dessutom anordnade vi tre pedagogiska evenemang där vi underlättade en diskussion om begreppet `rätten till staden`."
+    ],
+    "imageUrl": ["/publicDisplay/floras/01.jpg", "/publicDisplay/floras/02.jpg"]
+  },
+  {
+    "title": "Exhibition at Artists’ Corner",
+    "subtitle": "May 2021 - Konstepidemin, Gothenburg",
+    "desc_en": [
+      "We first shared our research process at Konstepidemin’s Artists’ Corner, presenting the contributions we gathered with the children at Hammarkullsskolan. These contributions, containing proposals, perspectives and thoughts, were the base of our conversation with a broader public from different parts of the city.",
+      "During this first display, we were also present in the space, inviting the visitors to become part of a discussion about the right to the city and to contribute with their interventions onto photos from Gothenburg. Additionally, wo groups of students from Dômen Konstskola visited the space and joined us in a pedagogical workshop we prepared. "
+    ],
+    "desc_sv": [
+      "Vi delade först med oss av vår forskningsprocess på Konstepidemins konstnärshörna, där vi presenterade de bidrag vi samlat in tillsammans med barnen på Hammarkullsskolan. Dessa bidrag, som innehöll förslag, perspektiv och tankar, var grunden för vårt samtal med en bredare publik från olika delar av staden.",
+      "Under denna första utställning närvarade vi också i lokalen och bjöd in besökarna att delta i en diskussion om rätten till staden och att bidra med sina inlägg på foton från Göteborg."
+    ],
+    "imageUrl": [
+      "/publicDisplay/konstepidemin/01.jpg",
+      "/publicDisplay/konstepidemin/02.jpg",
+      "/publicDisplay/konstepidemin/03.jpg",
+      "/publicDisplay/konstepidemin/04.jpg"
+    ]
+  }
+]

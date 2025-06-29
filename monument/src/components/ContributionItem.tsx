@@ -41,15 +41,12 @@ const ContributionItem: React.FC<Props> = ({
         </div>
         <div className='w-[28%] flex mt-[-1.3rem] ml-10'>
           <Image
-            // src={`/contributions-optimized/${contribution.id}.webp`}
             alt={`Contribution ${contribution.id}`}
             width={800} // logical display size – adjust as needed
             height={600}
             sizes='(max-width:768px) 90vw, 800px' // responsive hints
             placeholder='blur'
-            // blurDataURL={`/contributions-optimized/thumbs/${contribution.image}.webp`}
             src={contribution.image}
-            // alt={`Contribution ${contribution.id}`}
             className='cursor-pointer rounded'
             onClick={() => onOpen(idx)}
           />

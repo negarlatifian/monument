@@ -3,20 +3,20 @@
     "title": "Exhibition at MKC",
     "subtitle": "April 2024 - MKC Mångkulturellt Centrum",
     "imageUrl": [
-      "/publicDisplay/mkc/01.jpg",
-      "/publicDisplay/mkc/02.jpg",
-      "/publicDisplay/mkc/03.jpg",
-      "/publicDisplay/mkc/04.jpg"
+      "/publicDisplay-optimized/mkc/01.webp",
+      "/publicDisplay-optimized/mkc/02.webp",
+      "/publicDisplay-optimized/mkc/03.webp",
+      "/publicDisplay-optimized/mkc/04.webp"
     ]
   },
   {
     "title": "Exhibition at Bergsjön Centrum",
     "subtitle": "September-November 2023 - Bergsjön Centrum Part of GIBCA Extended Program",
     "imageUrl": [
-      "/publicDisplay/bergsjon/01.jpg",
-      "/publicDisplay/bergsjon/02.jpg",
-      "/publicDisplay/bergsjon/03.jpg",
-      "/publicDisplay/bergsjon/04.jpg"
+      "/publicDisplay-optimized/bergsjon/01.webp",
+      "/publicDisplay-optimized/bergsjon/02.webp",
+      "/publicDisplay-optimized/bergsjon/03.webp",
+      "/publicDisplay-optimized/bergsjon/04.webp"
     ]
   },
   {
@@ -34,7 +34,10 @@
       "Vi ville visa hur vår kollektiva föreställning om den stad som ska byggas innehåller vitt skilda uppfattningar om stadens offentliga rum. Dessa baseras på våra egna erfarenheter av våra grannskap, men också på ofta överdrivna porträtt i media.",
       "Som en del av utställningen hade vi ett DIY-område i lokalen där besökarna kunde skapa sina egna fotointerventioner och på så sätt bidra till projektet. Dessutom anordnade vi tre pedagogiska evenemang där vi underlättade en diskussion om begreppet `rätten till staden`."
     ],
-    "imageUrl": ["/publicDisplay/floras/01.jpg", "/publicDisplay/floras/02.jpg"]
+    "imageUrl": [
+      "/publicDisplay-optimized/floras/01.webp",
+      "/publicDisplay-optimized/floras/02.webp"
+    ]
   },
   {
     "title": "Exhibition at Artists’ Corner",
@@ -48,10 +51,10 @@
       "Under denna första utställning närvarade vi också i lokalen och bjöd in besökarna att delta i en diskussion om rätten till staden och att bidra med sina inlägg på foton från Göteborg."
     ],
     "imageUrl": [
-      "/publicDisplay/konstepidemin/01.jpg",
-      "/publicDisplay/konstepidemin/02.jpg",
-      "/publicDisplay/konstepidemin/03.jpg",
-      "/publicDisplay/konstepidemin/04.jpg"
+      "/publicDisplay-optimized/konstepidemin/01.webp",
+      "/publicDisplay-optimized/konstepidemin/02.webp",
+      "/publicDisplay-optimized/konstepidemin/03.webp",
+      "/publicDisplay-optimized/konstepidemin/04.webp"
     ]
   }
 ]

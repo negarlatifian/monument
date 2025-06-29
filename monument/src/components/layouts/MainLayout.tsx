@@ -38,10 +38,10 @@ export default function MainLayout({ children }: PropsWithChildren) {
       <main className='mx-auto w-full max-w-5xl'>{children}</main>
 
       {/* ---------- Footer ---------- */}
-      <footer className='border-t bg-gray-50 py-8 text-center text-sm text-gray-500'>
+      {/* <footer className='border-t bg-gray-50 py-8 text-center text-sm text-gray-500'>
         © {new Date().getFullYear()} Monument of the City to Build. All rights
         reserved.
-      </footer>
+      </footer> */}
     </>
   );
 }

@@ -1,5 +1,3 @@
-import { promises as fs } from 'fs';
-import type { NextPage, GetStaticProps } from 'next';
 import { Exhibition } from '@/types';
 import Image from 'next/image';
 

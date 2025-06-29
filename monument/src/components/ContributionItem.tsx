@@ -45,7 +45,6 @@ const ContributionItem: React.FC<Props> = ({
             width={800} // logical display size – adjust as needed
             height={600}
             sizes='(max-width:768px) 90vw, 800px' // responsive hints
-            placeholder='blur'
             src={contribution.image}
             className='cursor-pointer rounded'
             onClick={() => onOpen(idx)}

@@ -1,8 +1,14 @@
-// src/pages/theproject.tsx
 import Head from 'next/head';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import SectionBlock from '@/components/SectionBlock';
+import { urban } from '@/lib/fonts';
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat', // CSS variable
+});
 
 const TheProjectPage: NextPage = () => (
   <>
@@ -15,24 +21,42 @@ const TheProjectPage: NextPage = () => (
       <link rel='icon' href='/favicon.ico' sizes='any' />
     </Head>
 
-    <div className='ml-5 mt-15'>
-      <div className='flex flex-col mb-4 gap-5'>
-        <section className='flex flex-row gap-23 '>
-          <div className='flex flex-col gap-3 '>
-            <span className='ml-2 mt-[-0.5rem]'>
-              <h1 className=' text-[2.4rem]'>About </h1>
-              <h1 className=' text-[2.4rem]'>the project</h1>
+    <div className=' sm:mt-15 mt-5 '>
+      <div className='flex flex-col sm:mb-4 gap-5 items-center'>
+        <section className='flex flex-col sm:flex-row sm:gap-10 sm:justify-between'>
+          <div className='flex sm:flex-col flex-row sm:gap-0 '>
+            <span className='hidden sm:block ml-2 mb-8 mt-[-0.9rem]'>
+              <h1
+                className={`hidden sm:flex text-[2.7rem] font-semibold text-[rgb(54,54,54)] ${urban.className}`}
+              >
+                About{' '}
+              </h1>
+              <h1
+                className={`hidden sm:flex text-[2.7rem] font-semibold text-[rgb(54,54,54)] ${urban.className}`}
+              >
+                the project
+              </h1>
             </span>
 
             <Link
               href='/theprojectsv'
-              className='mb-20 rounded-3xl w-30 text-center justify-center align-middle border-2 border-[#FECE07] px-3 py-1 text-gray-900 backdrop-blur hover:bg-black hover:text-white hover:border-black'
+              className={`sm:mb-20 sm:block sm:ml-2 hidden mr-5 ml-auto rounded-full w-9.5 sm:w-30 font-Montserrat text-center justify-center align-middle border-2 border-[#FECE07] p-2 sm:text-[0.86rem] sm:px-[0.01rem] sm:py-[0.02rem] text-[#363636] backdrop-blur hover:bg-[#363636] hover:text-white hover:border-black ${montserrat.variable} font-extralight tracking-widest`}
             >
               svenska
             </Link>
+            <Link
+              href='/theprojectsv'
+              className=' block sm:hidden mr-5 ml-auto rounded-full w-9.5 text-center justify-center align-middle border-2 border-[#FECE07] p-2 text-[0.8rem] font-medium bg-[#FECE07] text-[#363636] backdrop-blur hover:bg-[#363636] hover:text-white hover:border-black'
+            >
+              SV
+            </Link>
           </div>
-          <article className='flex flex-col gap-5 w-[68%] text-[1.25rem] font-light leading-6.5'>
-            <p>
+          <article className='flex flex-col gap-6 px-10 sm:px-0 sm:w-[70%] text-[0.9rem] sm:text-[rgb(54,54,54)] sm:text-[1.18rem] font-light leading-6.5 box-content'>
+            <h1 className='sm:hidden text-[1.2rem] font-medium '>
+              {' '}
+              About the project
+            </h1>
+            <p className='font-light'>
               <i>A Monument of the City to Build</i> is a socially engaged
               artistic project, exploring the politics of residentship in the
               Swedish urban landscape through the notion of the right to the
@@ -40,7 +64,7 @@ const TheProjectPage: NextPage = () => (
               Gothenburg, over 200 participants have contributed to the project
               thus far with their thoughts, reflections and proposals.
             </p>
-            <p>
+            <p className='font-urban'>
               The project investigates how successive generations of social,
               cultural, and financial policies have shaped the development of
               urban spaces in Sweden, and how this development has in turn
@@ -57,7 +81,7 @@ const TheProjectPage: NextPage = () => (
             </p>
           </article>
         </section>
-        <span className='w-[80%] border-b-3 border-b-[#FECE07] mr-5 ml-auto'></span>
+        <span className='w-[77%] border-b-3 border-b-[#FECE07] mr-5 ml-auto'></span>
       </div>
       <div className='flex flex-col ml-5 mr-auto'>
         <SectionBlock

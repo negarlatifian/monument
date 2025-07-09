@@ -7,9 +7,18 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        /* 2) or (optionally) a dedicated class `font-mont` */
-        mont: ['var(--font-montserrat)', 'ui-sans-serif', 'system-ui'],
-        roboto: ['var(--font-roboto)', 'ui-sans-serif', 'system-ui'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+        roboto: ['var(--font-roboto)', 'sans-serif'],
+        urban: ['var(--font-urban)', 'sans-serif'],
+      },
+      fontWeight: {
+        // Add missing weights if needed
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        black: '900',
       },
     },
   },

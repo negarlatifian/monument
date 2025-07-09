@@ -30,7 +30,7 @@ const TheProjectPage: NextPage = () => (
               English
             </Link>
           </div>
-          <article className='flex flex-col gap-5 w-[68%] text-[1.25rem] font-light leading-6.5'>
+          <article className='flex flex-col px-0 gap-5  w-[85%] text-[1.25rem] font-light leading-6.5'>
             <p>
               <i className='font-normal'>A Monument of the City to Build</i>{' '}
               [Ett monument för staden som återstår att byggas] är ett socialt

@@ -24,15 +24,21 @@ export default function SectionBlock({
   linkLabel = 'svenska',
 }: SectionBlockProps) {
   return (
-    <section className='flex flex-row gap-6 justify-end mt-4 mb-4'>
+    <section className='flex sm:flex-row sm:gap-6 sm:justify-end flex-col align-middle mt-4 mb-4'>
       {/* ---------- LEFT COLUMN ---------- */}
-      <div className='flex flex-col gap-3 shrink-0'>
-        <span className='ml-2 -mt-2 flex flex-col '>
+      <div className='flex flex-col gap-3 shrink-0 '>
+        <span className='sm:ml-2 sm:mt-0 mt-1 flex flex-col  '>
           {titles.map((t) => (
-            <h1 key={t} className='text-[1.6rem] leading-9 mr-0 ml-auto'>
+            <h1
+              key={t}
+              className='hidden sm:block sm:font-medium text-[1.6rem] leading-9 mr-0 ml-auto'
+            >
               {t}
             </h1>
           ))}
+          <h1 className='sm:hidden text-[1rem] leading-9 mr-auto ml-auto'>
+            {titles[0]}&nbsp;{titles[1]}
+          </h1>
         </span>
 
         {linkHref && (
@@ -47,7 +53,7 @@ export default function SectionBlock({
       </div>
 
       {/* ---------- RIGHT COLUMN ---------- */}
-      <article className='flex w-[65%] flex-col gap-5 text-[0.95rem] font-light leading-5'>
+      <article className='flex sm:w-[65%] w-[100%] flex-col gap-5 sm:px-0 px-10 text-[0.9rem] font-light leading-5'>
         {paragraphs.map((p, i) => (
           <p key={i}>{p}</p>
         ))}

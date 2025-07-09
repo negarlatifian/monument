@@ -1,9 +1,12 @@
 // src/pages/_app.tsx
-import '../styles/globals.css'; // Tailwind & any base styles
+import '../app/globals.css'; // Tailwind & any base styles
 import type { AppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '@/components/layouts/MainLayout';
+import Head from 'next/head';
+
+// import { urban } from '@/lib/fonts';
 
 /**
  * Augment NextPage so individual pages can export:
@@ -23,5 +26,14 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     Component.getLayout ??
     ((page: ReactElement) => <MainLayout>{page}</MainLayout>);
 
-  return getLayout(<Component {...pageProps} />);
+  return (
+    <>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+      </Head>
+
+      {/* Font wrapper with all CSS variables */}
+      <div>{getLayout(<Component {...pageProps} />)}</div>
+    </>
+  );
 }

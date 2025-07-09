@@ -17,7 +17,7 @@ const AboutPage: NextPage = () => (
       />
     </Head>
     <div className='flex flex-col mt-15 mb-5 items-center min-h-screen'>
-      <section className='flex flex-row text-[0.86rem] leading-4 mb-15  text-center justify-evenly '>
+      <section className='flex flex-col text-[0.7rem] sm:flex-row sm:text-[0.86rem] sm:leading-4 sm:mb-15  text-center justify-evenly '>
         <div className='flex flex-col gap-5 w-[32%]'>
           <p>
             <i>A Monument of the City to Build </i>was initiated in 2021 by

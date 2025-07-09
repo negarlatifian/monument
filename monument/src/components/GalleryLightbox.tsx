@@ -28,11 +28,17 @@ export default function GalleryLightbox({
       if (e.key === 'ArrowLeft') onChange((index - 1 + total) % total);
     };
     document.addEventListener('keydown', key);
-    const { overflow } = document.body.style;
+    // const { overflow } = document.body.style;
+    const oldBodyOverflow = document.body.style.overflow;
+    // const { width } = document.documentElement.style;
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.width = '100%';
     return () => {
       document.removeEventListener('keydown', key);
-      document.body.style.overflow = overflow;
+      document.body.style.overflow = oldBodyOverflow;
+      // document.documentElement.style.width = width;
+      document.documentElement.style.removeProperty('width');
+      document.documentElement.style.removeProperty('position');
     };
   }, [index, total, onChange, onClose]);
 

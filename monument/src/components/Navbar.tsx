@@ -32,7 +32,7 @@ export default function Navbar() {
      hover:text-[rgb(254,206,7)]`;
 
   return (
-    <nav className='relative z-30'>
+    <nav className='relative z-30 w-fit'>
       {/* ───── Top bar ───── */}
       <div
         className='mx-auto flex max-w-5xl items-center justify-between

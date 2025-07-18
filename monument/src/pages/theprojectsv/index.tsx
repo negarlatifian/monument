@@ -52,7 +52,7 @@ const TheProjectPage: NextPage = () => (
               EN
             </Link>
           </div>
-          <article className='flex flex-col gap-6 px-10 sm:px-0 sm:w-[70%] text-[0.9rem] sm:text-[rgb(54,54,54)] sm:text-[1.18rem] font-light leading-6.5 box-content'>
+          <article className='flex flex-col gap-6 px-10 sm:px-0 sm:w-[70%] text-[0.95rem] sm:text-[rgb(54,54,54)] sm:text-[1.18rem] font-light leading-6.5 box-content'>
             <h1 className='sm:hidden text-[1.2rem] font-medium '>
               {' '}
               Om Projektet

@@ -8,6 +8,12 @@ import { Contribution } from '@/types';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 import { useState } from 'react';
 import GalleryLightbox from '@/components/GalleryLightbox';
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat', // CSS variable
+});
 
 interface ContributionsPageProps {
   contributions: Contribution[];
@@ -37,7 +43,9 @@ const ContributionsPage: NextPage<ContributionsPageProps> = ({
           content='Browse every contribution to A Monument of the City to Build.'
         />
       </Head>
-      <div className='flex flex-col  mt-15 ml-6 mb-20 w-fit'>
+      <div
+        className={`flex flex-col  mt-15 ml-6 mb-20 w-fit ${montserrat.variable}`}
+      >
         <section className='flex flex-row text-[0.86rem] font-light leading-4 gap-20 mb-15 '>
           <div className='w-[87%] flex flex-col gap-5'>
             <p>
@@ -60,7 +68,7 @@ const ContributionsPage: NextPage<ContributionsPageProps> = ({
               have been edited for clarity.
             </p>
           </div>
-          <div className='text-[rgb(186,186,186)] w-[87%] flex flex-col gap-5'>
+          <div className='text-[rgb(165,165,165)] w-[87%] flex flex-col gap-5'>
             <p>
               Bilderna här visar förslag, önskningar, drömmar och reflektioner
               från var och en av de över 200 deltagarna i [Ett monument för

@@ -1,7 +1,14 @@
 'use-client';
 
 import { Contribution } from '@/types';
+import { Rubik } from 'next/font/google';
 import Image from 'next/image';
+
+const rubik = Rubik({
+  subsets: ['latin'],
+  weight: ['300'],
+  variable: '--font-rubik', // CSS variable
+});
 
 interface Props {
   contribution: Contribution;
@@ -15,7 +22,7 @@ const ContributionItem: React.FC<Props> = ({
   onOpen,
 }: Props) => {
   return (
-    <section className='mt-10 flex flex-col'>
+    <section className={`${rubik.className} mt-10 flex flex-col`}>
       <span className='border-t-[0.03rem] ml-[-1.5rem] mb-4'></span>
       <div className='text-amber-400 text-[0.6rem] ml-[-1.3rem]'>
         <p>{contribution.id}</p>

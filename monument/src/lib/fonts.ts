@@ -1,6 +1,6 @@
 import localFont from 'next/font/local';
 
-export const urban = localFont({
+export const urbanGrotesk = localFont({
   src: [
     // Regular
     {

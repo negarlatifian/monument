@@ -5,7 +5,13 @@ import { PropsWithChildren } from 'react';
 import Navbar from '../Navbar';
 import Head from 'next/head';
 
-import { urban } from '@/lib/fonts';
+import { urbanGrotesk } from '@/lib/fonts';
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat', // CSS variable
+});
 
 /** A shared layout for every page *except* the landing page */
 export default function MainLayout({ children }: PropsWithChildren) {
@@ -39,7 +45,9 @@ export default function MainLayout({ children }: PropsWithChildren) {
       </header>
 
       {/* ---------- Main content ---------- */}
-      <main className={`mx-auto w-full max-w-5xl ${urban.className}`}>
+      <main
+        className={`mx-auto w-full max-w-5xl ${urbanGrotesk.className} ${montserrat.variable}`}
+      >
         {children}
       </main>
     </html>

@@ -1,9 +1,9 @@
 import localFont from 'next/font/local';
 // import { urban } from '@/lib/fonts';
-import { Montserrat, Roboto } from 'next/font/google';
+import { Montserrat, Roboto, Rubik } from 'next/font/google';
 import type { Metadata } from 'next';
 import './globals.css';
-import { urban } from '@/lib/fonts';
+import { urbanGrotesk } from '@/lib/fonts';
 
 export const metadata: Metadata = {
   title: 'Your Site Title',
@@ -19,6 +19,11 @@ const roboto = Roboto({
   weight: ['400', '700'],
   variable: '--font-roboto', // CSS variable
 });
+const rubik = Rubik({
+  subsets: ['latin'],
+  weight: ['300'],
+  variable: '--font-rubik', // CSS variable
+});
 
 export default function RootLayout({
   children,
@@ -28,9 +33,11 @@ export default function RootLayout({
   return (
     <html
       lang='en'
-      className={`${montserrat.variable} ${roboto.variable} ${urban.className}`}
+      className={`${montserrat.variable} ${roboto.variable} ${urbanGrotesk.className}`}
     >
-      <body className={`${urban.className} text-[rgb(54,54,54)]`}>
+      <body
+        className={`${urbanGrotesk.className} ${montserrat.variable} ${rubik.variable} text-[rgb(54,54,54)]`}
+      >
         {children}
       </body>
     </html>

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Montserrat } from 'next/font/google';
-import { urban } from '@/lib/fonts';
+import { urbanGrotesk } from '@/lib/fonts';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -39,7 +39,9 @@ export default function Navbar() {
      hover:text-[rgb(254,206,7)]`;
 
   return (
-    <nav className={`${urban.className} font-montserrat relative z-30 w-fit`}>
+    <nav
+      className={`${urbanGrotesk.className} font-montserrat relative z-30 w-fit`}
+    >
       {/* ───── Top bar ───── */}
       <div
         className='mx-auto flex max-w-5xl items-center justify-between

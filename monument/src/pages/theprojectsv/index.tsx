@@ -3,7 +3,7 @@ import Head from 'next/head';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import SectionBlock from '@/components/SectionBlock';
-import { urban } from '@/lib/fonts';
+import { urbanGrotesk } from '@/lib/fonts';
 import { Montserrat } from 'next/font/google';
 
 const montserrat = Montserrat({
@@ -28,12 +28,12 @@ const TheProjectPage: NextPage = () => (
           <div className='flex sm:flex-col flex-row sm:gap-0 '>
             <span className='hidden sm:block ml-2 mb-8 mt-[-0.9rem]'>
               <h1
-                className={`hidden sm:flex text-[2.7rem] font-semibold text-[rgb(54,54,54)] ${urban.className}`}
+                className={`hidden sm:flex text-[2.7rem] font-semibold text-[rgb(54,54,54)] ${urbanGrotesk.className}`}
               >
                 om{' '}
               </h1>
               <h1
-                className={`hidden sm:flex text-[2.7rem] font-semibold text-[rgb(54,54,54)] ${urban.className}`}
+                className={`hidden sm:flex text-[2.7rem] font-semibold text-[rgb(54,54,54)] ${urbanGrotesk.className}`}
               >
                 projektet
               </h1>

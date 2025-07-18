@@ -44,10 +44,10 @@ const ContributionsPage: NextPage<ContributionsPageProps> = ({
         />
       </Head>
       <div
-        className={`flex flex-col  mt-15 ml-6 mb-20 w-fit ${montserrat.variable}`}
+        className={`flex flex-col  mt-15 ml-6 mb-20 w-fit ${montserrat.className}`}
       >
-        <section className='flex flex-row text-[0.86rem] font-light leading-4 gap-20 mb-15 '>
-          <div className='w-[87%] flex flex-col gap-5'>
+        <section className='flex flex-row text-[0.75rem] font-normal leading-4 gap-20 mb-15 '>
+          <div className={` w-[87%] flex flex-col gap-5 text-[rgb(54,54,54)]`}>
             <p>
               The images here represent the proposals, wishes, dreams, and
               reflections of each one of the 200+ participants in A Monument of
@@ -68,7 +68,9 @@ const ContributionsPage: NextPage<ContributionsPageProps> = ({
               have been edited for clarity.
             </p>
           </div>
-          <div className='text-[rgb(165,165,165)] w-[87%] flex flex-col gap-5'>
+          <div
+            className={`${montserrat.className} text-[rgb(165,165,165)] text-[0.75rem] font-normal w-[87%] flex flex-col gap-5`}
+          >
             <p>
               Bilderna här visar förslag, önskningar, drömmar och reflektioner
               från var och en av de över 200 deltagarna i [Ett monument för
@@ -93,7 +95,7 @@ const ContributionsPage: NextPage<ContributionsPageProps> = ({
         <section className='flex flex-row'>
           <DoubleButton />
         </section>
-        <section className='flex flex-row text-[0.86rem] font-light leading-4 gap-20 mb-15 '>
+        <section className='flex flex-row text-[0.75rem]  leading-4 gap-20 mb-15 '>
           <div className='w-[87%] flex flex-col gap-5'>
             <p>
               The contributions have been gathered in collaboration with: Blå
@@ -105,7 +107,7 @@ const ContributionsPage: NextPage<ContributionsPageProps> = ({
               and Svartedalsskolan.
             </p>
           </div>
-          <div className='w-[87%] flex flex-col gap-5'>
+          <div className='text-[rgb(165,165,165)]  w-[87%] flex flex-col gap-5'>
             <p>
               Bidragen har samlats in i samarbete med: Blå Stället Konsthall,
               Hammarkullens skola, Dômen konstskola, Göteborgs Botaniska

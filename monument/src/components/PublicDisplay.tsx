@@ -1,6 +1,17 @@
 import { Exhibition } from '@/types';
+import { Montserrat, Roboto } from 'next/font/google';
 import Image from 'next/image';
 
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat', // CSS variable
+});
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-roboto', // CSS variable
+});
 interface Props {
   exhibition: Exhibition;
 }
@@ -9,9 +20,11 @@ export default function PublicDisplay({ exhibition }: Props) {
   return (
     <section className='flex flex-row ml-10 mb-20 mt-10 text-[1.2rem] '>
       <div className='flex flex-col w-[50%]'>
-        <h1 className='font-bold'>{exhibition.title}</h1>
+        <h1 className={`font-bold ${roboto.className}`}>{exhibition.title}</h1>
         <span className='border border-b-3 border-[rgb(232,230,230)] mt-3 w-[95%]'></span>
-        <p className='text-[0.88rem]  text-[rgb(53,53,53)] font-mont tracking-wider font-normal w-[92%] mb-5'>
+        <p
+          className={`${montserrat.className} text-[0.8rem]  text-[rgb(53,53,53)] font-mont tracking-wide font-normal w-[92%] mb-5`}
+        >
           {exhibition.subtitle}
         </p>
         <div className='flex flex-col gap-3'>

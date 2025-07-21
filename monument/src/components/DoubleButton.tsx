@@ -17,7 +17,7 @@ export default function DoubleButton() {
      hover:bg-[rgb(186,186,186)]`;
 
   return (
-    <div className='flex flex-row gap-5'>
+    <div className='flex  flex-col sm:gap-5 justify-center sm:flex-row'>
       {buttonItems.map(({ label, href }) => (
         <Link key={href} href={href} className={linkClass(href)}>
           {label}

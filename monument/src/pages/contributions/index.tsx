@@ -44,9 +44,9 @@ const ContributionsPage: NextPage<ContributionsPageProps> = ({
         />
       </Head>
       <div
-        className={`flex flex-col  mt-15 ml-6 mb-20 w-fit ${montserrat.className}`}
+        className={`flex flex-col sm:mt-15 sm:ml-6 mt-[2rem] ml-[2rem] mb-20 w-fit ${montserrat.className}`}
       >
-        <section className='flex flex-row text-[0.75rem] font-normal leading-4 gap-20 mb-15 '>
+        <section className='flex sm:flex-row flex-col sm:text-[0.75rem] text-[0.68rem] font-normal leading-4 sm:gap-20 gap-10 mb-15 '>
           <div className={` w-[87%] flex flex-col gap-5 text-[rgb(54,54,54)]`}>
             <p>
               The images here represent the proposals, wishes, dreams, and
@@ -69,7 +69,7 @@ const ContributionsPage: NextPage<ContributionsPageProps> = ({
             </p>
           </div>
           <div
-            className={`${montserrat.className} text-[rgb(165,165,165)] text-[0.75rem] font-normal w-[87%] flex flex-col gap-5`}
+            className={`${montserrat.className} text-[rgb(165,165,165)] sm:text-[0.75rem] text-[0.68rem] font-normal w-[87%] flex flex-col gap-5`}
           >
             <p>
               Bilderna här visar förslag, önskningar, drömmar och reflektioner
@@ -92,10 +92,10 @@ const ContributionsPage: NextPage<ContributionsPageProps> = ({
             </p>
           </div>
         </section>
-        <section className='flex flex-row'>
+        <section className='flex flex-row justify-center sm:justify-start'>
           <DoubleButton />
         </section>
-        <section className='flex flex-row text-[0.75rem]  leading-4 gap-20 mb-15 '>
+        <section className='flex flex-col sm:flex-row sm:text-[0.75rem] text-[0.68rem] leading-4 gap-10 sm:gap-20 mb-1 mt-5 sm:mt-0 sm:mb-15 '>
           <div className='w-[87%] flex flex-col gap-5'>
             <p>
               The contributions have been gathered in collaboration with: Blå

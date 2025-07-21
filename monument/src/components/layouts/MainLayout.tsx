@@ -33,10 +33,10 @@ export default function MainLayout({ children }: PropsWithChildren) {
       </Head>
       {/* ---------- Header ---------- */}
       <header className='sticky top-0 z-30  bg-white/90 backdrop-blur'>
-        <div className='mx-auto flex max-w-5xl items-center justify-between px-4 py-3 '>
+        <div className='mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:mt-0 sm:mr-0 sm:ml-[10rem] mt-3 ml-6 mr-1 '>
           <Link
             href='/'
-            className='sm:text-xl text-[1rem] font-semibold text-black'
+            className='sm:text-xl text-[0.95rem] font-semibold text-black'
           >
             A Monument of a City to Build
           </Link>

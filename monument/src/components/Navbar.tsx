@@ -45,7 +45,7 @@ export default function Navbar() {
       {/* ───── Top bar ───── */}
       <div
         className='mx-auto flex max-w-5xl items-center justify-between
-                      px-2 py-2 sm:px-6'
+                      px-2 py-2 sm:px-6 '
       >
         {/* desktop links */}
         <div className='hidden gap-2 sm:flex sm:gap-8'>

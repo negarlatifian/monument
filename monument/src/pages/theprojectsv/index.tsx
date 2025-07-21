@@ -46,7 +46,7 @@ const TheProjectPage: NextPage = () => (
               English
             </Link>
             <Link
-              href='/theprojectsv'
+              href='/theproject'
               className=' block sm:hidden mr-5 ml-auto rounded-full w-9.5 text-center justify-center align-middle border-2 border-[#FECE07] p-2 text-[0.8rem] font-medium bg-[#FECE07] text-[#363636] backdrop-blur hover:bg-[#363636] hover:text-white hover:border-black'
             >
               EN

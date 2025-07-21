@@ -23,7 +23,7 @@ const AboutPage: NextPage = () => (
       />
     </Head>
     <div className='flex flex-col mt-15 mb-5 items-center min-h-screen'>
-      <section className='flex flex-col text-[0.7rem] sm:flex-row sm:w-[65%] sm:gap-[3rem] sm:text-[0.8rem] text-[rgb(54,54,54)] sm:leading-4 sm:mb-15  text-center justify-evenly '>
+      <section className='flex flex-col text-[0.7rem] sm:flex-row sm:w-[65%] w-[70%] sm:gap-[3rem] gap-12 sm:text-[0.8rem] text-[rgb(54,54,54)] sm:leading-4 sm:mb-15 text-left sm:text-center justify-evenly '>
         <div className='flex flex-col gap-5 '>
           <p>
             <i>A Monument of the City to Build </i>was initiated in 2021 by
@@ -87,9 +87,9 @@ const AboutPage: NextPage = () => (
           </p>
         </div>
       </section>
-      <section>
+      <section className='mt-10 sm:mt-0'>
         <p
-          className={`${montserrat.className} text-[0.85rem] text-[rgb(54,54,54)]`}
+          className={`${montserrat.className} sm:text-[0.85rem] text-[0.7rem] text-[rgb(54,54,54)]`}
         >
           Contact us at&nbsp;
           <Link href='mailto:motctb@gmail.com'>motctb@gmail.com</Link>
@@ -98,12 +98,12 @@ const AboutPage: NextPage = () => (
       <div className='mt-5'>
         <InstagramLink />
       </div>
-      <span className='w-[75%] border-b-3 border-b-[#FECE07] mt-5'></span>
-      <section className='text-[0.8rem] text-[rgb(54,54,54)] font-normal'>
+      <span className='sm:w-[75%] w-[65%] border-b-3 border-b-[#FECE07] mt-5 mb-5'></span>
+      <section className='sm:text-[0.8rem] text-[0.7rem] text-[rgb(54,54,54)] font-normal sm:w-fit w-[70%]'>
         <p className='mt-5 mb-5'>
           A Monument of the City to Build is realised with the support of:
         </p>
-        <div className='flex flex-col text-center'>
+        <div className='flex flex-col sm:text-center text-left gap-0.7 sm:text-[0.8rem] text-[0.66rem]'>
           <p>Kulturrådet – The Swedish Arts Council</p>
           <p>
             Kulturförvaltningen, Kultur och samhällsutveckling – Göteborgs Stad

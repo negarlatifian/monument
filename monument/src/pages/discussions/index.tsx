@@ -8,8 +8,8 @@ const DiscussionsPage: NextPage = () => (
       <title>The Project Svenska | Monument of the City to Build</title>
       <meta name='Discussions Page' content='Disscussions page' />
     </Head>
-    <div className='flex flex-col ml-5 mt-15 mr-15 mb-20'>
-      <section className='flex  flex-row text-[1.3rem] font-semibold leading-5 gap-20 mb-15 h-[55vh] justify-center '>
+    <div className='flex flex-col ml-[2rem] mr-[2rem] sm:ml-5 mt-15 sm:mr-15 mb-20'>
+      <section className='flex  flex-row text-[1.1rem] sm:text-[1.3rem] font-semibold leading-5 gap-20 mb-15 h-[55vh] justify-center '>
         <p>Coming Soon</p>
       </section>
     </div>
